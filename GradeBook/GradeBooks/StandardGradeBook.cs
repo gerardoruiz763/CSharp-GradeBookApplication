@@ -4,7 +4,7 @@
     {
         public StandardGradeBook(string name)
         {
-            Type = GradeBookType.Standard;
+            Type = GradeBookType.Standard; 
         }
     }
 }
