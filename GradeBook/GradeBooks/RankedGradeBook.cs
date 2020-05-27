@@ -10,13 +10,8 @@ namespace GradeBook.GradeBooks
         {
             Type = GradeBookType.Ranked;
         }
-        public override void CalculateStatistics()
-        {
-            if (Students.Count < 5)
-                Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
-            return;
+        
 
-        }
         public override char GetLetterGrade(double averageGrade)
         {
             if (Students.Count < 5)
@@ -36,5 +31,15 @@ namespace GradeBook.GradeBooks
             else
                  return 'F';
         }
+        public override void CalculateStatistics()
+        {
+            if (Students.Count < 5)
+            {
+                Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
+                return;
+            }
+            base.CalculateStatistics();
+        }
+
     }
 }
