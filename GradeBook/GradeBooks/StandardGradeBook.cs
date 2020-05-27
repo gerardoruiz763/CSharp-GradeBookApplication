@@ -2,9 +2,6 @@
 {
     public class StandardGradeBook : BaseGradeBook
     {
-        public StandardGradeBook(string name)
-        {
-            Type = GradeBookType.Standard; 
-        }
+        public StandardGradeBook(string name);
     }
 }
